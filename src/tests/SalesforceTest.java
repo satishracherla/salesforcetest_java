@@ -64,8 +64,15 @@ public class SalesforceTest {
         }
     }
 
-    @Test
+@Test
     public void createAccountContactAndExportReport() {
+        // This test requires:
+        // 1. Valid Salesforce credentials in config file
+        // 2. Chrome browser installed
+        // 3. ChromeDriver matching your Chrome version
+        // 4. TestNG framework configured in your project
+        // 5. Required dependencies in pom.xml (Selenium, TestNG)
+
         String accountName = TestUtils.generateUniqueAccountName();
         String contactName = TestUtils.generateUniqueContactName();
 
@@ -80,7 +87,6 @@ public class SalesforceTest {
         // Export Report
         exportAccountReport();
     }
-
     private void createAccount(String accountName) {
         homePage.goToSales()
                 .navigateToAccounts();
