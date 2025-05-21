@@ -25,19 +25,6 @@ public class SalesforceTest {
     private AccountsPage accountsPage;
     private ContactsPage contactsPage;
     private ReportsPage reportsPage;
-import java.time.Duration;
-
-public class SalesforceTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private static final Duration TIMEOUT = Duration.ofSeconds(30);
-    private static final Duration POLLING_INTERVAL = Duration.ofSeconds(2);
-
-    // Page objects
-    private HomePage homePage;
-    private AccountsPage accountsPage;
-    private ContactsPage contactsPage;
-    private ReportsPage reportsPage;
 
     @BeforeClass
     public void setup() {
