@@ -8,6 +8,20 @@ import org.testng.annotations.*;
 import pages.*;
 import utils.TestUtils;
 
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import pages.*;
+import utils.TestUtils;
+import utils.WaitUtils;
+import utils.ConfigLoader;
 import utils.WaitUtils;
 
 package tests;
@@ -31,6 +45,7 @@ import exceptions.TestException; // Missing import for TestException
 import models.AccountDetails; // Missing import for AccountDetails
 import models.ContactDetails; // Missing import
 import models.ContactDetails; // Missing import for ContactDetails
+
 
 import java.time.Duration;
 
