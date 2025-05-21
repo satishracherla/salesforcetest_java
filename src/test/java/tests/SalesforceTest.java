@@ -3,15 +3,12 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import pages.*;
-import utils.TestUtils;
-import utils.WaitUtils;
-import utils.ConfigLoader;
+
 
 
 public class SalesforceTest {
