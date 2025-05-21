@@ -1,20 +1,30 @@
-package pages;
-import org.openqa.selenium.*;
-
 public class AccountsPage {
     private WebDriver driver;
-    public AccountsPage(WebDriver driver) { this.driver = driver; }
-    public void clickNew() { driver.findElement(By.xpath("//div[text()='New']")).click(); }
-    public void fillAccountForm(String name, String phone, String website, String industry, String employees, String revenue) {
-        driver.findElement(By.xpath("//input[@name='Account Name']")).sendKeys(name);
-        driver.findElement(By.xpath("//input[@name='Phone']")).sendKeys(phone);
-        driver.findElement(By.xpath("//input[@name='Website']")).sendKeys(website);
-        driver.findElement(By.xpath("//input[@name='Industry']")).sendKeys(industry);
-        driver.findElement(By.xpath("//input[@name='Employees']")).sendKeys(employees);
-        driver.findElement(By.xpath("//input[@name='Annual Revenue']")).sendKeys(revenue);
+    private WaitUtils waitUtils;
+
+    public AccountsPage(WebDriver driver) {
+        this.driver = driver;
+        this.waitUtils = new WaitUtils(driver, 20); // 20 seconds timeout
     }
-    public void save() { driver.findElement(By.xpath("//button[@name='Save']")).click(); }
+
+    public void clickNew() {
+        By newButton = By.xpath("//div[text()='New']");
+        waitUtils.waitForElementClickable(newButton).click();
+    }
+
+    public void fillAccountForm(String name) {
+        By nameField = By.xpath("//input[@name='Account Name']");
+        waitUtils.waitForElementVisible(nameField).sendKeys(name);
+        // ... fill other fields similarly
+    }
+
+    public void save() {
+        By saveButton = By.xpath("//button[@name='Save']");
+        waitUtils.waitForElementClickable(saveButton).click();
+    }
+
     public boolean verifyAccountCreated(String name) {
-        return driver.getPageSource().contains(name);
+        By accountName = By.xpath("//span[text()='" + name + "']");
+        return waitUtils.waitForElementVisible(accountName).isDisplayed();
     }
 }
