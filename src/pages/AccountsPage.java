@@ -1,3 +1,6 @@
+package pages;
+import org.openqa.selenium.*;
+
 public class AccountsPage {
     private WebDriver driver;
     private WaitUtils waitUtils;

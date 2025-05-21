@@ -4,16 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.*;
-import pages.*;
-import utils.TestUtils;
-
-package tests;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -22,32 +12,7 @@ import pages.*;
 import utils.TestUtils;
 import utils.WaitUtils;
 import utils.ConfigLoader;
-import utils.WaitUtils;
 
-package tests;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.*;
-import org.testng.Assert; // Missing
-import org.testng.Assert; // Missing import for Assert
-import pages.*;
-import utils.TestUtils;
-import utils.WaitUtils;
-import utils.ConfigLoader; // Missing import for
-import utils.ConfigLoader; // Missing import for ConfigLoader
-import pages.LoginPage; // Missing import for LoginPage
-import pages.LoginPage; // Missing import for LoginPage
-import exceptions.TestException; // Missing import for
-import exceptions.TestException; // Missing import for TestException
-import models.AccountDetails; // Missing import for AccountDetails
-import models.ContactDetails; // Missing import
-import models.ContactDetails; // Missing import for ContactDetails
-
-
-import java.time.Duration;
 
 public class SalesforceTest {
     private WebDriver driver;
@@ -101,6 +66,7 @@ public class SalesforceTest {
         String loginUrl = ConfigLoader.getProperty("salesforce.url");
 
         driver.get(loginUrl);
+
         new LoginPage(driver).login(username, password);
     }
 
