@@ -15,11 +15,10 @@ import utils.ConfigLoader;
 
 
 public class SalesforceTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
     private static final Duration TIMEOUT = Duration.ofSeconds(30);
     private static final Duration POLLING_INTERVAL = Duration.ofSeconds(2);
-
+    private WebDriver driver;
+    private WebDriverWait wait;
     // Page objects
     private HomePage homePage;
     private AccountsPage accountsPage;
@@ -64,7 +63,7 @@ public class SalesforceTest {
         }
     }
 
-@Test
+    @Test
     public void createAccountContactAndExportReport() {
         String accountName = TestUtils.generateUniqueAccountName();
         String contactName = TestUtils.generateUniqueContactName();
@@ -80,6 +79,7 @@ public class SalesforceTest {
         // Export Report
         exportAccountReport();
     }
+
     private void createAccount(String accountName) {
         homePage.goToSales()
                 .navigateToAccounts();

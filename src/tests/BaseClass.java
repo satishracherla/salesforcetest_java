@@ -10,11 +10,11 @@ import utils.TestUtils;
 import java.time.Duration;
 
 public class baseClass {
-    private WebDriver driver;
     private final String username = "satish.r177@agentforce.com";
     private final String password = "Agentforce@2025";
     private final String loginUrl = "https://login.salesforce.com";
     private final String homeUrl = loginUrl + "/lightning/page/home";
+    private WebDriver driver;
 
     @BeforeClass
     public void setup() {
