@@ -10,6 +10,41 @@ import utils.TestUtils;
 
 import utils.WaitUtils;
 
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.*;
+import org.testng.Assert; // Missing
+import org.testng.Assert; // Missing import for Assert
+import pages.*;
+import utils.TestUtils;
+import utils.WaitUtils;
+import utils.ConfigLoader; // Missing import for
+import utils.ConfigLoader; // Missing import for ConfigLoader
+import pages.LoginPage; // Missing import for LoginPage
+import pages.LoginPage; // Missing import for LoginPage
+import exceptions.TestException; // Missing import for
+import exceptions.TestException; // Missing import for TestException
+import models.AccountDetails; // Missing import for AccountDetails
+import models.ContactDetails; // Missing import
+import models.ContactDetails; // Missing import for ContactDetails
+
+import java.time.Duration;
+
+public class SalesforceTest {
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private static final Duration TIMEOUT = Duration.ofSeconds(30);
+    private static final Duration POLLING_INTERVAL = Duration.ofSeconds(2);
+
+    // Page objects
+    private HomePage homePage;
+    private AccountsPage accountsPage;
+    private ContactsPage contactsPage;
+    private ReportsPage reportsPage;
 import java.time.Duration;
 
 public class SalesforceTest {
